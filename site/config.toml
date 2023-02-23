@@ -8,8 +8,7 @@ title = "My new Victor-Hugo site"
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
-security:
-  funcs:
-    getenv:
-      - ^HUGO_
-      - ^WC_
+[security]
+	[security.funcs]
+		getenv = ['^HUGO_', '^CI$']
+
